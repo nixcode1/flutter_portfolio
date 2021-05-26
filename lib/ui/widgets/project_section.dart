@@ -16,8 +16,8 @@ class ProjectSection extends StatelessWidget {
       ),
             ),
             SizedBox(height: 20),
-            Project(title: "Student Shop", description: "A marketplace for student", imgLink: 'images/img1.png', barColor: Color(0xFF5d5778),),
-            Project(title: "Med Pal", description: "A study app for medical students", imgLink: "images/img2.png", barColor: Colors.green)
+            Project(title: "Student Shop", description: "A marketplace for student", imgLink: 'https://i.imgur.com/SjfRmeC.png', barColor: Color(0xFF5d5778),),
+            Project(title: "Med Pal", description: "A study app for medical students", imgLink: "https://i.imgur.com/em4Em45.png", barColor: Colors.green)
           ],
         ),
     );

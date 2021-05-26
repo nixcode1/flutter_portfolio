@@ -75,7 +75,7 @@ class Project extends StatelessWidget {
                 Container(
                   height: 500,
                   padding: EdgeInsets.all(10),
-                  child: Image.asset(imgLink),
+                  child: Image.network(imgLink),
                 )
               ],
             ),
