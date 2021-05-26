@@ -25,37 +25,38 @@ class DesktopPage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(color: Colors.black87),
-        child: ListView(
-          shrinkWrap: true,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0, top: 30),
-              child: RichText(
-                text: TextSpan(
-                  text: Strings.greetings,
-                  style: Styles.textStyle,
-                  children: [
-                    TextSpan(text: Strings.name, style: Styles.nameStyle)
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0, top: 30),
+                child: RichText(
+                  text: TextSpan(
+                    text: Strings.greetings,
+                    style: Styles.textStyle,
+                    children: [
+                      TextSpan(text: Strings.name, style: Styles.nameStyle)
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Text("I develop beautiful mobile apps",
-                  style: Styles.textStyle),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Text("and websites", style: Styles.textStyle),
-            ),
-            SizedBox(height: 50),
-            SkillsSection(),
-            SizedBox(height: 30),
-            ProjectSection(),
-            ContactSection(),
-            SizedBox(height: 30),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text("I develop beautiful mobile apps",
+                    style: Styles.textStyle),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text("and websites", style: Styles.textStyle),
+              ),
+              SizedBox(height: 50),
+              SkillsSection(),
+              SizedBox(height: 30),
+              ProjectSection(),
+              ContactSection(),
+              SizedBox(height: 30),
+            ],
+          ),
         ),
       ),
     );

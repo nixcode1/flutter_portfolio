@@ -3,11 +3,11 @@ import 'package:portfolio/constants/colors.dart';
 
 class Styles {
   static const textStyle = TextStyle(
-      fontSize: 30,
+      fontSize: 40,
       color: MyColors.primaryTextColor,
       fontWeight: FontWeight.bold);
   static const nameStyle = TextStyle(
-    fontSize: 30,
+    fontSize: 40,
     color: Colors.green,
     fontWeight: FontWeight.bold,
   );
