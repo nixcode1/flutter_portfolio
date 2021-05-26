@@ -14,6 +14,12 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        primary: Colors.white,
+        shape: StadiumBorder(
+          side: BorderSide()
+        )
+      ),
       onPressed: _launchURL,
       child: Text(title),
     );
