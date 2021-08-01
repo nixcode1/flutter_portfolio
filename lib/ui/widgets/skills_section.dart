@@ -13,7 +13,8 @@ class SkillsSection extends StatelessWidget {
             "Skills",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 25,
+              fontSize: 30,
+              
             ),
           ),
           SizedBox(height: 20),

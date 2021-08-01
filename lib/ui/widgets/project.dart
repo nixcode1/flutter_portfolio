@@ -7,17 +7,23 @@ class Project extends StatelessWidget {
   final String imgLink;
   final Color barColor;
 
-  const Project({Key? key, required this.title, required this.description, required this.imgLink, required this.barColor})
+  const Project(
+      {Key? key,
+      required this.title,
+      required this.description,
+      required this.imgLink,
+      required this.barColor})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 700,
+      height: 600,
       margin: EdgeInsets.only(bottom: 50),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(20)),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             width: 20,
@@ -27,9 +33,6 @@ class Project extends StatelessWidget {
                 topLeft: Radius.circular(20),
                 bottomLeft: Radius.circular(20),
               ),
-            ),
-            constraints: BoxConstraints(
-              minHeight: 500,
             ),
           ),
           Expanded(
@@ -61,8 +64,8 @@ class Project extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(barColor)
-                        ),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(barColor)),
                         child: Text(
                           "Explore",
                           style: TextStyle(
@@ -75,7 +78,10 @@ class Project extends StatelessWidget {
                 Container(
                   height: 500,
                   padding: EdgeInsets.all(10),
-                  child: Image.network(imgLink),
+                  child: Image.network(
+                    imgLink,
+                    fit: BoxFit.fitHeight,
+                  ),
                 )
               ],
             ),

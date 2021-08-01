@@ -16,8 +16,8 @@ class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
-      width: 500,
+      height: MediaQuery.of(context).size.height * 0.3,
+      width: MediaQuery.of(context).size.width * 0.8,
       margin: EdgeInsets.only(bottom: 50),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(20)),
@@ -44,7 +44,7 @@ class Skills extends StatelessWidget {
                   style: Styles.titleTextStyle,
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 30),
               Wrap(
                 spacing: 5,
                 runSpacing: 5,
@@ -53,7 +53,7 @@ class Skills extends StatelessWidget {
                     .map(
                       (e) => Chip(
                         label: Text(e),
-                        labelStyle: TextStyle(fontWeight: FontWeight.bold),
+                        labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                       ),
                     )
                     .toList(),
